@@ -425,7 +425,9 @@ class _FilterPageState extends State<FilterPage> {
                     ),
                   ),
                   color: Colors.white,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                 ),
               ),
               SizedBox(width: 30),
@@ -446,7 +448,9 @@ class _FilterPageState extends State<FilterPage> {
                     ),
                   ),
                   color: Color(0xFFDB3022),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                 ),
               ),
             ],
