@@ -1,0 +1,24 @@
+c/* Buat array tersebut menjadi sebuah array menjadi seperti format "(xxx) xxx-xxxx, bila length array di atas 10
+atau di bawah 10 return invalid */ 
+
+  String createPhoneNumber(List arr) {
+    String result = "";
+    bool errorInput = false;
+    arr.forEach((element) {
+      if (!(element >= 0 && element <= 9)) {
+        errorInput = true;
+      }
+    });
+    if (arr.length == 10 && !errorInput) {
+      result = "(${arr[0]}${arr[1]}${arr[2]}) ${arr[3]}${arr[4]}${arr[5]}-${arr[6]}${arr[7]}${arr[8]}${arr[9]}";
+    } else {
+      result = "invalid";
+    }
+    return result;
+  }
+
+
+createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+
+
